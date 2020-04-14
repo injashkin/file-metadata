@@ -35,8 +35,7 @@ app.post("/api/fileanalyse", function (req, res) {
   var uploadFile = upload.single('upfile');
 
   uploadFile(req, res, function (err) {
-    let filedata = req.file;
-    console.log(filedata);
+    let filedata = req.file;    
 
     if (!filedata) {
       res.send("Ошибка при загрузке файла");
